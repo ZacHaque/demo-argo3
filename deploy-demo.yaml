@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: demo-oni
+  name: demo-oni
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demo-oni
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: demo-oni
+    spec:
+      containers:
+      - image: footstepsolutions/myresume:v1
+        name: nginx
+        ports:
+        - containerPort: 80
