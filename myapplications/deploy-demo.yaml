@@ -5,7 +5,7 @@ metadata:
     app: demo-oni
   name: demo-oni
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: demo-oni
