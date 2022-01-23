@@ -6,7 +6,7 @@ metadata:
     app: bb
   name: gooddeploy
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: bb
@@ -24,7 +24,7 @@ spec:
       containers:
         - name: busybox
           image: busybox
-          command: [ "sh", "-c", "sleep 1h" ]
+          command: [ "sh", "-c", "sleep 24h" ]
           securityContext:
             readOnlyRootFilesystem: true
             allowPrivilegeEscalation: false
